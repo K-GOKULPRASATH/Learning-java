@@ -1,0 +1,26 @@
+import java.util.*;
+class Main{
+    public static void main(String[]args){
+        Scanner scan = new Scanner(System.in);
+        int val = scan.nextInt();
+        int temp = val;
+        int po = 0;
+        int res = 0;
+        
+        while(temp > 0){
+            po++;
+            temp = temp /10;
+        }
+        temp = val;
+        
+        while (temp > 0){
+            int digit = temp %10;
+            res = res + (int)Math.pow(digit,po);
+            temp = temp/10;
+        }
+        if(res == val)
+            System.out.println("Amstrong"+res);
+        else
+            System.out.println("Not an Amstrong"+val+"!="+res);
+    }
+}
