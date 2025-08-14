@@ -1,0 +1,17 @@
+
+class Solution {
+    public String longest(List<String> arr) {
+        
+        
+         String compare = arr.get(0);
+         
+        for(int check = 1; check < arr.size(); check++){
+            if(arr.get(check).length() > compare.length()){
+                compare = arr.get(check);
+                
+            }
+        }
+        
+        return compare;
+    }
+}
